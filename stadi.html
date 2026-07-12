@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Materiale - Sicurezza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <img src="logop.png" alt="Logo" align="right" width="200" style="margin: 10px;">
+ <header>
+        <h1>FIFA World Cup PIEROLANDIA 2038</h1>
+    </header>
+
+   <nav>
+    <a href="index.html">Partite</a>
+    <a href="materiale.html">Nazioni</a>
+    <a href="gironi.html">Gironi</a>
+    <a href="cruciverba.html">Tabellone</a>
+    <a href="stadi.html">Stadi</a>
+	<a href="intro.html">Intro</a>
+</nav>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gli Stadi Ufficiali - FIFA World Cup 2026</title>
+    <style>
+        :root {
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --accent-color: #1e3a8a; /* Blu FIFA */
+            --accent-light: #e0f2fe;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-banner {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header-banner h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .header-banner p {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            color: #93c5fd;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Griglia flessibile adattiva per le schede degli stadi */
+        .stadiums-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card dello stadio */
+        .stadium-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stadium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Box dell'immagine segnaposto o reale dello stadio */
+        .stadium-image-box {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 40px;
+        }
+
+        .country-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(15, 23, 42, 0.75);
+            color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Contenuto informativo */
+        .stadium-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .stadium-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 6px 0;
+            color: var(--accent-color);
+        }
+
+        .stadium-location {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Tabella compatta delle specifiche dello stadio */
+        .stadium-specs {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: auto;
+        }
+
+        .stadium-specs td {
+            padding: 8px 0;
+            font-size: 13px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .stadium-specs tr:last-child td {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .spec-value {
+            text-align: right;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="stadiums-grid">
+
+        <!-- ================= STADIO 1 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Nuuk Stadium</h2>
+                <div class="stadium-location">📍 Nuuk, Costa centro-occidentale</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Nuuk Stadium</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">82.500 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">2010</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value" style="color: #22c55e;">Finalissima</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= STADIO 2 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box" style="background: linear-gradient(135deg, #10b981, #047857);">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Campo di Sisimiut</h2>
+                <div class="stadium-location">📍 Sisimiut, Centro-occidentale</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Sisimiut Stadium</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">56.856 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">1966</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value">Semifinale 2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= STADIO 3 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Campo di Ilulissat</h2>
+                <div class="stadium-location">📍 Ilulissat, Avannaata</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Pierino's Stadium</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">54.845 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">2026</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value">Finale 3/4° posto</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= STADIO 4 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Campo di Maniitsoq</h2>
+                <div class="stadium-location">📍 Maniitsoq, Qeqqata</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Minions' Stadium</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">48.239 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">2026</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value">Quarto Di Finale 4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= STADIO 5 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Campo di Aasiaat</h2>
+                <div class="stadium-location">📍 Aasiaat, Qeqertalik</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Papi's Stadium</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">43.940 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">1983 (Rinnovato 2026)</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value">Ottavo Di Finale 6</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= STADIO 6 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Campo di Qasigiannguit</h2>
+                <div class="stadium-location">📍 Qasigiannguit, Qeqertalik</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Arancio's Stadium</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">42.394 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">1987</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value">Ottavo Di Finale 3</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= STADIO 7 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Campo di Qaqortoq</h2>
+                <div class="stadium-location">📍 Qaqortoq, Kujalleq</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Qaqortoq Stadium</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">38.039 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">2020</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value">Ottavo Di Finale 7</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- ================= STADIO 8 ================= -->
+        <div class="stadium-card">
+            <div class="stadium-image-box" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
+                🏟️
+                <span class="country-badge">Pierolandia</span>
+            </div>
+            <div class="stadium-content">
+                <h2 class="stadium-name">Campo di Narsaq</h2>
+                <div class="stadium-location">📍 Narsaq, Kujalleq</div>
+                <table class="stadium-specs">
+                    <tr>
+                        <td class="spec-label">Nome Commerciale</td>
+                        <td class="spec-value">Narsaq Field</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Capienza Ufficiale</td>
+                        <td class="spec-value">34.845 posti</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Inaugurazione</td>
+                        <td class="spec-value">2007</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Match di Cartello</td>
+                        <td class="spec-value">Sedicesimo Di Finale 7</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fine .stadiums-grid -->
+</div> <!-- Fine .container -->
+
+</body>
+</html>

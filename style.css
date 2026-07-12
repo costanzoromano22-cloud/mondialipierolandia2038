@@ -1,0 +1,90 @@
+/* --- RESET E FONT --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Bold, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* AZZURRINO*/
+    color: #333;
+    padding: 20px;
+}
+
+/* --- CONTAINER CENTRALE --- */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* --- TITOLI --- */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    padding-left: 15px;
+	font-family: Dasha;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+
+.btn-moderno:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+    filter: brightness(1.1);
+}
+
+/* --- INPUT TEXT MODERNO --- */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+}
+
+/* Stile per la barra di navigazione */
+nav {
+    background-color: #FAA859;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px; /* Spazio tra i link */
+	width: 550px;
+}
+
+/* Stile dei link (NAV) */
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 8px 10px;
+    transition: all 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse (Hover) */
+nav a:hover {
+    background-color: #ffffff; /* Un blu professionale */
+    color: red;
+	border-radius: 20px;
+    transform: translateY(-2px);
+}

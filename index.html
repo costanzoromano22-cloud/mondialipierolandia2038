@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>FIFA World Cup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+ <img src="logop.png" alt="Logo" align="right" width="200" style="margin: 10px;">
+    <h1>FIFA World Cup PIEROLANDIA 2038</h1> 
+</header>
+
+   <nav>
+    <a href="index.html">Partite</a>
+    <a href="materiale.html">Nazioni</a>
+    <a href="gironi.html">Gironi</a>
+    <a href="cruciverba.html">Tabellone</a>
+    <a href="stadi.html">Stadi</a>
+	<a href="intro.html">Intro</a>
+</nav>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario e Risultati Completi - Mondiali 2026</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --accent-color: #1e3a8a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Navigazione per saltare rapidamente alle varie Fasi */
+        .phase-nav {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .phase-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 12px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .phase-nav a:hover {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+        /* Intestazione della Data o della Fase */
+        .date-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .date-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .view-bracket {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .view-bracket:hover {
+            color: var(--accent-color);
+        }
+
+        /* Card del Singolo Match */
+        .match-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.01);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .match-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .team-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .team-box.home { justify-content: flex-end; text-align: right; }
+        .team-box.away { justify-content: flex-start; text-align: left; }
+
+        .flag { font-size: 18px; }
+
+        .score-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 110px;
+            justify-content: center;
+        }
+
+        .score-num {
+            font-size: 20px;
+            font-weight: 700;
+            width: 25px;
+            text-align: center;
+        }
+
+        .penalty-num {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .status-badge {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            background-color: #f1f5f9;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .match-details {
+            font-size: 11px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .detail-item::after {
+            content: "•";
+            margin-left: 8px;
+            color: #cbd5e1;
+        }
+
+        .detail-item:last-child::after { content: ""; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Barra di navigazione interna -->
+    <div class="phase-nav">
+        <a href="#gironi">Fase a Gironi</a>
+        <a href="#sedicesimi">Sedicesimi</a>
+        <a href="#ottavi">Ottavi di Finale</a>
+        <a href="#quarti">Quarti di Finale</a>
+        <a href="#semifinali">Semifinali</a>
+        <a href="#finali">Finali</a>
+    </div>
+
+    <!-- ================= FASE A GIRONI ================= -->
+    <div id="gironi">
+        
+        <!-- Giovedì 11 Giugno 2026 -->
+        <div class="date-header">
+            <span class="date-title">Giovedì 11 giugno 2026</span>
+            <a href="#" class="view-bracket">Vedi gironi</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Messico 🇲🇽</div>
+                <div class="score-box">
+                    <span class="score-num">2</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">0</span>
+                </div>
+                <div class="team-box away">🇿🇦 Sudafrica</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Gruppo A</span>
+                <span class="detail-item">Stadio Azteca (Città del Messico)</span>
+            </div>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Canada 🇨🇦</div>
+                <div class="score-box">
+                    <span class="score-num">1</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">1</span>
+                </div>
+                <div class="team-box away">🇧🇦 Bosnia ed Erzegovina</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Gruppo B</span>
+                <span class="detail-item">BC Place (Vancouver)</span>
+            </div>
+        </div>
+
+        <!-- Venerdì 12 Giugno 2026 -->
+        <div class="date-header">
+            <span class="date-title">Venerdì 12 giugno 2026</span>
+            <a href="#" class="view-bracket">Vedi gironi</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Stati Uniti 🇺🇸</div>
+                <div class="score-box">
+                    <span class="score-num">3</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">1</span>
+                </div>
+                <div class="team-box away">🇸🇦 Arabia Saudita</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Gruppo C</span>
+                <span class="detail-item">SoFi Stadium (Los Angeles)</span>
+            </div>
+        </div>
+
+        <!-- Lunedì 22 Giugno 2026 -->
+        <div class="date-header">
+            <span class="date-title">Lunedì 22 giugno 2026</span>
+            <a href="#" class="view-bracket">Vedi gironi</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Italia 🇮🇹</div>
+                <div class="score-box">
+                    <span class="score-num">2</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">1</span>
+                </div>
+                <div class="team-box away">🇵🇾 Paraguay</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Gruppo I</span>
+                <span class="detail-item">MetLife Stadium (New York New Jersey)</span>
+            </div>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Argentina 🇦🇷</div>
+                <div class="score-box">
+                    <span class="score-num">2</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">0</span>
+                </div>
+                <div class="team-box away">🇸🇪 Svezia</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Gruppo K</span>
+                <span class="detail-item">Hard Rock Stadium (Miami)</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= SEDICESIMI DI FINALE ================= -->
+    <div id="sedicesimi">
+        
+        <!-- Mercoledì 01 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Mercoledì 01 luglio 2026</span>
+            <a href="#" class="view-bracket">Vedi tabelloni</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Germania 🇩🇪</div>
+                <div class="score-box">
+                    <span class="score-num">3</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">1</span>
+                </div>
+                <div class="team-box away">🇵🇾 Paraguay</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Sedicesimi di finale</span>
+                <span class="detail-item">Gillette Stadium (Boston)</span>
+            </div>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Francia 🇫🇷</div>
+                <div class="score-box">
+                    <span class="score-num">2</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">0</span>
+                </div>
+                <div class="team-box away">🇸🇪 Svezia</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Sedicesimi di finale</span>
+                <span class="detail-item">MetLife Stadium (New York New Jersey)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= OTTAVI DI FINALE ================= -->
+    <div id="ottavi">
+        
+        <!-- Sabato 04 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Sabato 04 luglio 2026</span>
+            <a href="#" class="view-bracket">Vedi tabelloni</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">USA 🇺🇸</div>
+                <div class="score-box">
+                    <span class="score-num">1</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">4</span>
+                </div>
+                <div class="team-box away">🇧🇪 Belgio</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Ottavi di finale</span>
+                <span class="detail-item">Stadio di Seattle (Seattle)</span>
+            </div>
+        </div>
+
+        <!-- Domenica 05 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Domenica 05 luglio 2026</span>
+            <a href="#" class="view-bracket">Vedi tabelloni</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Argentina 🇦🇷</div>
+                <div class="score-box">
+                    <span class="score-num">3</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">2</span>
+                </div>
+                <div class="team-box away">🇪🇬 Egitto</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Ottavi di finale</span>
+                <span class="detail-item">Stadio di Atlanta (Atlanta)</span>
+            </div>
+        </div>
+
+        <!-- Lunedì 06 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Lunedì 06 luglio 2026</span>
+            <a href="#" class="view-bracket">Vedi tabelloni</a>
+        </div>
+
+        <!-- Esempio di Partita Finita ai Rigori come da Screenshot -->
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Svizzera 🇨🇭</div>
+                <div class="score-box">
+                    <span class="penalty-num">(4)</span>
+                    <span class="score-num">0</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">0</span>
+                    <span class="penalty-num">(3)</span>
+                </div>
+                <div class="team-box away">🇨🇴 Colombia</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Ottavi di finale</span>
+                <span class="detail-item">BC Place Vancouver (Vancouver)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= QUARTI DI FINALE ================= -->
+    <div id="quarti">
+        
+        <!-- Giovedì 09 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Giovedì 09 luglio 2026</span>
+            <a href="#" class="view-bracket">Vedi tabelloni</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Francia 🇫🇷</div>
+                <div class="score-box">
+                    <span class="score-num">2</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">0</span>
+                </div>
+                <div class="team-box away">🇲🇦 Marocco</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Quarto di finale</span>
+                <span class="detail-item">Stadio di Boston (Boston)</span>
+            </div>
+        </div>
+
+        <!-- Venerdì 10 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Venerdì 10 luglio 2026</span>
+            <a href="#" class="view-bracket">Vedi tabelloni</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Spagna 🇪🇸</div>
+                <div class="score-box">
+                    <span class="score-num">2</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">1</span>
+                </div>
+                <div class="team-box away">🇧🇪 Belgio</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Quarto di finale</span>
+                <span class="detail-item">Stadio di Los Angeles (Los Angeles)</span>
+            </div>
+        </div>
+
+        <!-- Sabato 11 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Sabato 11 luglio 2026</span>
+            <a href="#" class="view-bracket">Vedi tabelloni</a>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Norvegia 🇳🇴</div>
+                <div class="score-box">
+                    <span class="score-num">1</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">2</span>
+                </div>
+                <div class="team-box away">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inghilterra</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Quarto di finale (DTS)</span>
+                <span class="detail-item">Arrowhead Stadium (Kansas City)</span>
+            </div>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Argentina 🇦🇷</div>
+                <div class="score-box">
+                    <span class="score-num">3</span>
+                    <span class="status-badge">FINE</span>
+                    <span class="score-num">1</span>
+                </div>
+                <div class="team-box away">🇨🇭 Svizzera</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Quarto di finale (DTS)</span>
+                <span class="detail-item">NRG Stadium (Houston)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SEMIFINALI ================= -->
+    <div id="semifinali">
+        
+        <!-- Martedì 14 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Martedì 14 luglio 2026</span>
+        </div>
+
+        <div class="match-card" style="border-left: 4px solid var(--accent-color);">
+            <div class="match-main">
+                <div class="team-box home">Francia 🇫🇷</div>
+                <div class="score-box">
+                    <span class="score-num">-</span>
+                    <span class="status-badge" style="background-color: #e0f2fe; color: var(--accent-color);">21:00</span>
+                    <span class="score-num">-</span>
+                </div>
+                <div class="team-box away">🇪🇸 Spagna</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Semifinale 1</span>
+                <span class="detail-item">Dallas Stadium (Arlington)</span>
+            </div>
+        </div>
+
+        <!-- Mercoledì 15 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Mercoledì 15 luglio 2026</span>
+        </div>
+
+        <div class="match-card" style="border-left: 4px solid var(--accent-color);">
+            <div class="match-main">
+                <div class="team-box home">Inghilterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+                <div class="score-box">
+                    <span class="score-num">-</span>
+                    <span class="status-badge" style="background-color: #e0f2fe; color: var(--accent-color);">21:00</span>
+                    <span class="score-num">-</span>
+                </div>
+                <div class="team-box away">🇦🇷 Argentina</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Semifinale 2</span>
+                <span class="detail-item">Atlanta Stadium (Atlanta)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= FINALI ================= -->
+    <div id="finali">
+        
+        <!-- Sabato 18 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Sabato 18 luglio 2026</span>
+        </div>
+
+        <div class="match-card">
+            <div class="match-main">
+                <div class="team-box home">Perdente Semifinale 1</div>
+                <div class="score-box">
+                    <span class="score-num">-</span>
+                    <span class="status-badge">23:00</span>
+                    <span class="score-num">-</span>
+                </div>
+                <div class="team-box away">Perdente Semifinale 2</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item">Finale 3° Posto</span>
+                <span class="detail-item">Miami Stadium (Miami)</span>
+            </div>
+        </div>
+
+        <!-- Domenica 19 Luglio 2026 -->
+        <div class="date-header">
+            <span class="date-title">Domenica 19 luglio 2026</span>
+        </div>
+
+        <div class="match-card" style="background: linear-gradient(145deg, #ffffff, #f0fdf4); border: 2px solid #22c55e;">
+            <div class="match-main">
+                <div class="team-box home" style="color: var(--accent-color);">Vincente Semifinale 1</div>
+                <div class="score-box">
+                    <span class="score-num">-</span>
+                    <span class="status-badge" style="background-color: #22c55e; color: #fff;">FINALE</span>
+                    <span class="score-num">-</span>
+                </div>
+                <div class="team-box away" style="color: var(--accent-color);">Vincente Semifinale 2</div>
+            </div>
+            <div class="match-details">
+                <span class="detail-item" style="color: #15803d; font-weight: 700;">Finalissima Mondiale</span>
+                <span class="detail-item">New York New Jersey Stadium (East Rutherford)</span>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- Fine .container -->
+</body>
+</html>

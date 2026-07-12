@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellone FIFA 2026</title>
+       <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+ <img src="logop.png" alt="Logo" align="right" width="200" style="margin: 10px;">
+    <h1>FIFA World Cup PIEROLANDIA 2038</h1> 
+</header>
+
+   <nav>
+    <a href="index.html">Partite</a>
+    <a href="materiale.html">Nazioni</a>
+    <a href="gironi.html">Gironi</a>
+    <a href="cruciverba.html">Tabellone</a>
+    <a href="stadi.html">Stadi</a>
+	<a href="intro.html">Intro</a>
+</nav>
+
+
+
+   <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #cbd5e1;
+            --text-color: #0f172a;
+            --winner-color: #0284c7;
+            --accent-color: #1e3a8a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 10px;
+        }
+
+        .tournament-scroll {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        /* Griglia principale a 9 colonne: 4 a sinistra, 1 al centro, 4 a destra */
+        .tournament-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 170px) 200px repeat(4, 170px);
+            gap: 20px;
+            padding: 20px;
+            min-width: 1600px;
+            justify-content: center;
+        }
+
+        .round {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 950px;
+        }
+
+        .round-title {
+            text-align: center;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .matchup {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .matchup:hover {
+            transform: scale(1.02);
+            border-color: #94a3b8;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: 600;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .team:last-child {
+            border-bottom: none;
+        }
+
+        .team-info {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .score {
+            font-weight: 700;
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            min-width: 12px;
+            text-align: center;
+        }
+
+        .winner {
+            color: var(--winner-color);
+        }
+        .winner .score {
+            background-color: #e0f2fe;
+            color: var(--winner-color);
+        }
+
+        .center-focus {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 60px;
+            height: 950px;
+        }
+    </style>
+</head>
+<body>
+<div class="tournament-scroll">
+    <div class="tournament-grid">
+
+        <!-- ================= LATO SINISTRO (GIRONE A) ================= -->
+        <!-- 1. Sedicesimi Sinistra (8 Partite) -->
+        <div class="round">
+            <div class="round-title">Sedicesimi</div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇩🇪 GER</div><span class="score">3</span></div>
+                <div class="team"><div class="team-info">🇵🇾 PAR</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇫🇷 FRA</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇸🇪 SWE</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇺🇸 USA</div><span class="score">1</span></div>
+                <div class="team winner"><div class="team-info">🇨🇦 CAN</div><span class="score">2</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇲🇦 MAR</div><span class="score">1</span></div>
+                <div class="team"><div class="team-info">🇩🇿 ALG</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇵🇹 POR</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇭🇷 CRO</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇪🇸 ESP</div><span class="score">3</span></div>
+                <div class="team"><div class="team-info">🇦🇺 AUT</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇳🇱 NED</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇨🇭 SUI</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇧🇪 BEL</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇯🇵 JPN</div><span class="score">1</span></div>
+            </div>
+        </div>
+
+        <!-- 2. Ottavi Sinistra (4 Partite) -->
+        <div class="round">
+            <div class="round-title">Ottavi</div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇩🇪 GER</div><span class="score">0</span></div>
+                <div class="team winner"><div class="team-info">🇫🇷 FRA</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇨🇦 CAN</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇲🇦 MAR</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇵🇹 POR</div><span class="score">1</span></div>
+                <div class="team winner"><div class="team-info">🇪🇸 ESP</div><span class="score">3</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇳🇱 NED</div><span class="score">0</span></div>
+                <div class="team winner"><div class="team-info">🇧🇪 BEL</div><span class="score">1</span></div>
+            </div>
+        </div>
+
+        <!-- 3. Quarti Sinistra (2 Partite) -->
+        <div class="round">
+            <div class="round-title">Quarti</div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇫🇷 FRA</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇨🇦 CAN</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇪🇸 ESP</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇧🇪 BEL</div><span class="score">1</span></div>
+            </div>
+        </div>
+
+        <!-- 4. Semifinale Sinistra (1 Partita) -->
+        <div class="round">
+            <div class="round-title">Semifinale</div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇫🇷 FRA</div><span class="score">-</span></div>
+                <div class="team"><div class="team-info">🇪🇸 ESP</div><span class="score">-</span></div>
+            </div>
+        </div>
+     
+	 <!-- ================= 5. CENTRO (FINALI) ================= -->
+        <div class="center-focus">
+            <div>
+                <div class="round-title" style="color: var(--accent-color);">Finale</div>
+                <div class="matchup" style="border: 2px solid var(--accent-color);">
+                    <div class="team"><div class="team-info">❓ Vincente SF1</div><span class="score">-</span></div>
+                    <div class="team"><div class="team-info">❓ Vincente SF2</div><span class="score">-</span></div>
+                </div>
+            </div>
+            <div>
+                <div class="round-title">Terzo Posto</div>
+                <div class="matchup" style="border: 1px dashed var(--border-color);">
+                    <div class="team"><div class="team-info">❓ Perdente SF1</div><span class="score">-</span></div>
+                    <div class="team"><div class="team-info">❓ Perdente SF2</div><span class="score">-</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= LATO DESTRA (GIRONE B) ================= -->
+        <!-- 6. Semifinale Destra (1 Partita) -->
+        <div class="round">
+            <div class="round-title">Semifinale</div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG</div><span class="score">-</span></div>
+                <div class="team"><div class="team-info">🇦🇷 ARG</div><span class="score">-</span></div>
+            </div>
+        </div>
+
+        <!-- 7. Quarti Destra (2 Partite) -->
+        <div class="round">
+            <div class="round-title">Quarti</div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇳🇴 NOR</div><span class="score">1</span></div>
+                <div class="team winner"><div class="team-info">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG</div><span class="score">2</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇦🇷 ARG</div><span class="score">3</span></div>
+                <div class="team"><div class="team-info">🇧🇷 BRA</div><span class="score">1</span></div>
+            </div>
+        </div>
+
+        <!-- 8. Ottavi Destra (4 Partite) -->
+        <div class="round">
+            <div class="round-title">Ottavi</div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇮🇹 ITA</div><span class="score">1</span></div>
+                <div class="team winner"><div class="team-info">🇳🇴 NOR</div><span class="score">2</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team"><div class="team-info">🇲🇽 MEX</div><span class="score">0</span></div>
+                <div class="team winner"><div class="team-info">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG</div><span class="score">2</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇦🇷 ARG</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇺🇾 URU</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇧🇷 BRA</div><span class="score">3</span></div>
+                <div class="team"><div class="team-info">🇨🇴 COL</div><span class="score">0</span></div>
+            </div>
+        </div>
+
+        <!-- 9. Sedicesimi Destra (8 Partite) -->
+        <div class="round">
+            <div class="round-title">Sedicesimi</div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇮🇹 ITA</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇳🇴 NOR</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇲🇽 MEX</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇪🇨 ECU</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇨内部 COD</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇦🇷 ARG</div><span class="score">3</span></div>
+                <div class="team"><div class="team-info">🇨内部 CIV</div><span class="score">2</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇺🇾 URU</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇪🇬 EGY</div><span class="score">1</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇧🇷 BRA</div><span class="score">4</span></div>
+                <div class="team"><div class="team-info">🇰🇷 KOR</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇨🇴 COL</div><span class="score">1</span></div>
+                <div class="team"><div class="team-info">🇨🇱 CHI</div><span class="score">0</span></div>
+            </div>
+            <div class="matchup">
+                <div class="team winner"><div class="team-info">🇩🇰 DEN</div><span class="score">2</span></div>
+                <div class="team"><div class="team-info">🇳🇬 NGA</div><span class="score">1</span></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

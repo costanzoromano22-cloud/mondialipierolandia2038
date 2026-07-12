@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>FIFA World Cup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+ <img src="logop.png" alt="Logo" align="right" width="200" style="margin: 10px;">
+    <h1>FIFA World Cup PIEROLANDIA 2038</h1> 
+</header>
+
+   <nav>
+    <a href="index.html">Partite</a>
+    <a href="materiale.html">Nazioni</a>
+    <a href="gironi.html">Gironi</a>
+    <a href="cruciverba.html">Tabellone</a>
+    <a href="stadi.html">Stadi</a>
+	<a href="intro.html">Intro</a>
+</nav>
+
+  
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifiche e Gruppi - Mondiali 2026</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --win-color: #22c55e;
+            --draw-color: #94a3b8;
+            --loss-color: #ef4444;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .group-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 12px 10px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Allineamento a sinistra per il nome del gruppo e delle squadre */
+        .th-group, .td-team {
+            text-align: left;
+            padding-left: 20px;
+            font-weight: 700;
+        }
+
+        .th-group {
+            font-size: 16px;
+            color: var(--text-color);
+        }
+
+        .td-team {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Linea verticale verde per le prime due classificate */
+        .qualify-zone {
+            border-left: 4px solid var(--win-color);
+        }
+
+        /* Intestazioni colonne dati */
+        th:not(.th-group) {
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 600;
+            width: 45px;
+        }
+
+        th.th-form, td.td-form {
+            width: 110px;
+        }
+
+        .points {
+            font-weight: 700;
+        }
+
+        /* Pallini della Forma delle ultime partite */
+        .form-dots {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot.v { background-color: var(--win-color); }
+        .dot.n { background-color: var(--draw-color); }
+        .dot.p { background-color: var(--loss-color); }
+        .dot.empty { background-color: #e2e8f0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Classifiche e gruppi</h1>
+
+    <!-- ================= GRUPPO A ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo A</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇲🇽 Messico</td>
+                    <td>3</td><td>3</td><td>0</td><td>0</td><td>6</td><td>0</td><td>6</td><td class="points">9</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot v"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇿🇦 Sudafrica</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>2</td><td>3</td><td>-1</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇰🇷 Corea del Sud</td>
+                    <td>3</td><td>1</td><td>0</td><td>2</td><td>2</td><td>3</td><td>-1</td><td class="points">3</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot p"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇨🇿 Repubblica Ceca</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>6</td><td>-4</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot n"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO B ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo B</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇨🇭 Svizzera</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>7</td><td>3</td><td>4</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇨🇦 Canada</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>8</td><td>3</td><td>5</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇧🇦 Bosnia ed Erzegovina</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>5</td><td>6</td><td>-1</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇳🇿 Nuova Zelanda</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>1</td><td>9</td><td>-8</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot n"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO C ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo C</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇺🇸 Stati Uniti</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>6</td><td>2</td><td>4</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇪🇺 Scozia</td>
+                    <td>3</td><td>1</td><td>2</td><td>0</td><td>4</td><td>3</td><td>1</td><td class="points">5</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇨🇱 Cile</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>4</td><td>-1</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇸🇦 Arabia Saudita</td>
+                    <td>3</td><td>0</td><td>0</td><td>3</td><td>1</td><td>5</td><td>-4</td><td class="points">0</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO D ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo D</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇫🇷 Francia</td>
+                    <td>3</td><td>3</td><td>0</td><td>0</td><td>8</td><td>1</td><td>7</td><td class="points">9</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot v"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇩🇰 Danimarca</td>
+                    <td>3</td><td>2</td><td>0</td><td>1</td><td>5</td><td>3</td><td>2</td><td class="points">6</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot p"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇹🇳 Tunisia</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>5</td><td>-3</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇦🇺 Australia</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>1</td><td>7</td><td>-6</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO E ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo E</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇪🇸 Spagna</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>6</td><td>1</td><td>5</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇯🇵 Giappone</td>
+                    <td>3</td><td>1</td><td>2</td><td>0</td><td>4</td><td>2</td><td>2</td><td class="points">5</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇨🇲 Camerun</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>4</td><td>-1</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇨 Costa Rica</td>
+                    <td>3</td><td>0</td><td>0</td><td>3</td><td>1</td><td>7</td><td>-6</td><td class="points">0</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO F ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo F</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇩🇪 Germania</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>7</td><td>2</td><td>5</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇲🇦 Marocco</td>
+                    <td>3</td><td>2</td><td>0</td><td>1</td><td>5</td><td>3</td><td>2</td><td class="points">6</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot p"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇨内部 Costa d'Avorio</td>
+                    <td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>5</td><td>-2</td><td class="points">3</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇺🇿 Uzbekistan</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>7</td><td>-5</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO G ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo G</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇵🇹 Portogallo</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>6</td><td>2</td><td>4</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇧🇪 Belgio</td>
+                    <td>3</td><td>2</td><td>0</td><td>1</td><td>5</td><td>3</td><td>2</td><td class="points">6</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot p"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇮🇷 Iran</td>
+                    <td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>6</td><td>-3</td><td class="points">3</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇵🇦 Panama</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>5</td><td>-3</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO H ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo H</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇭🇷 Croazia</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>5</td><td>1</td><td>4</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇵🇱 Polonia</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>4</td><td>4</td><td>0</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇩🇿 Algeria</td>
+                    <td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>4</td><td>-1</td><td class="points">3</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot p"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 𝐉🇲 Giamaica</td>
+                    <td>3</td><td>0</td><td>2</td><td>1</td><td>2</td><td>5</td><td>-3</td><td class="points">2</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot n"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO I ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo I</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇮🇹 Italia</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>6</td><td>2</td><td>4</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇳🇴 Norvegia</td>
+                    <td>3</td><td>1</td><td>2</td><td>0</td><td>4</td><td>3</td><td>1</td><td class="points">5</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇸🇳 Senegal</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>3</td><td>0</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇵🇾 Paraguay</td>
+                    <td>3</td><td>0</td><td>0</td><td>3</td><td>1</td><td>6</td><td>-5</td><td class="points">0</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO J ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo J</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inghilterra</td>
+                    <td>3</td><td>3</td><td>0</td><td>0</td><td>7</td><td>1</td><td>6</td><td class="points">9</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot v"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇨内部 Rep. Dem. Congo</td>
+                    <td>3</td><td>1</td><td>1</td><td>1</td><td>4</td><td>4</td><td>0</td><td class="points">4</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot n"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇪🇨 Ecuador</td>
+                    <td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>5</td><td>-2</td><td class="points">3</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇮🇶 Iraq</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>6</td><td>-4</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO K ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo K</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇦🇷 Argentina</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>6</td><td>2</td><td>4</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇺🇾 Uruguay</td>
+                    <td>3</td><td>2</td><td>0</td><td>1</td><td>5</td><td>3</td><td>2</td><td class="points">6</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot p"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇪🇬 Egitto</td>
+                    <td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>5</td><td>-2</td><td class="points">3</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇸🇪 Svezia</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>6</td><td>-4</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= GRUPPO L ================= -->
+    <div class="group-card">
+        <table>
+            <thead>
+                <tr>
+                    <th class="th-group">Gruppo L</th>
+                    <th>G</th>
+                    <th>V</th>
+                    <th>N</th>
+                    <th>P</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>DR</th>
+                    <th class="points">Pti</th>
+                    <th class="th-form">FORMA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="qualify-zone">
+                    <td class="td-team">1 🇧🇷 Brasile</td>
+                    <td>3</td><td>2</td><td>1</td><td>0</td><td>7</td><td>2</td><td>5</td><td class="points">7</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot n"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr class="qualify-zone">
+                    <td class="td-team">2 🇨🇴 Colombia</td>
+                    <td>3</td><td>2</td><td>0</td><td>1</td><td>4</td><td>2</td><td>2</td><td class="points">6</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot v"></span><span class="dot p"></span><span class="dot v"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">3 🇳🇬 Nigeria</td>
+                    <td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>5</td><td>-2</td><td class="points">3</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot p"></span><span class="dot v"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+                <tr>
+                    <td class="td-team">4 🇮🇷 Iran</td>
+                    <td>3</td><td>0</td><td>1</td><td>2</td><td>1</td><td>6</td><td>-5</td><td class="points">1</td>
+                    <td class="td-form"><div class="form-dots"><span class="dot n"></span><span class="dot p"></span><span class="dot p"></span><span class="dot empty"></span><span class="dot empty"></span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div> <!-- Fine .container -->
+</body>
+</html>
